@@ -4,8 +4,8 @@ body {
 }
 
 nav {
-  background-color:rgb(147, 189, 226);
-  color:  black;
+  background-color: rgb(147, 189, 226);
+  color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,9 +17,17 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.logo img{
-    height: 100px;
-    margin-right: 15px;
+.logo img {
+  height: 100px;
+  margin-right: 15px;
+}
+
+.logo .rotate {
+  transition: rotate 4s ease;
+}
+
+.logo .rotate:hover {
+  rotate: 720deg;
 }
 
 .nav-links {
@@ -32,51 +40,65 @@ nav {
 .nav-links li a {
   text-decoration: none;
   border-radius: 20px;
-  background-color: rgba(256,256,256,0.1);
+  background-color: rgba(256, 256, 256, 0.1);
   padding: 10px 20px 10px 20px;
   color: rgba(0, 12, 22, 0.9);
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
   text-decoration: dotted;
   background-color: rgb(20, 81, 172);
-  color: rgba(256,256,256,1);
+  color: rgba(256, 256, 256, 1);
+  transform: 1s;
 }
 .nav-toggle {
-    display: none;
-   }
+  display: none;
+}
+nav-links li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #ffcc00; /* Animation color */
+  transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-links li a:hover::after {
+  width: 100%; /* Expand width on hover */
+}
 
 @media screen and (max-width: 768px) {
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      background-color: #333;
-      width: 100%;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .nav-links li {
-      margin-right: 0;
-      text-align: center;
-      padding: 10px 0;
-      border-bottom: 1px solid #555;
-    }
-  
-    .nav-links li:last-child {
-      border-bottom: none;
-    }
-  
-    .nav-toggle {
-      display: block;
-      color: #fff;
-      font-size: 1.5rem;
-      margin-right: 20px;
-      cursor: pointer;
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
   }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
