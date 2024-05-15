@@ -1,15 +1,17 @@
 @font-face {
-  }
-  :root{
-    --font-color-main: white;
-    --font-color-hover: black;
-    
-    --hover-background: white;
-    --nohover-background: black;
-  }
+    font-family: SF-Pro;
+    src: url(public/Font/SFPRODISPLAYREGULAR.OTF);
+}
+:root {
+  --font-color-main: white;
+  --font-color-hover: black;
+
+  --hover-background: white;
+  --nohover-background: black;
+}
 body {
   margin: 0;
-  font-family:  Arial, sans-serif;
+  font-family: SF-Pro, Arial, sans-serif;
   background-color: #415c75;
 }
 
@@ -23,8 +25,7 @@ nav {
   position: sticky;
   border-bottom: 1px solid rgba(256, 256, 256, 0.2);
   width: 90%;
-    margin: 1em auto 0;
-
+  margin: 1em auto 0;
 }
 .logo {
   font-size: 1rem;
@@ -35,7 +36,7 @@ nav {
 .logo img {
   height: 100px;
   margin-right: 15px;
-  transition: transform 2s ease ;
+  transition: transform 2s ease;
 }
 
 .logo .rotate {
@@ -47,28 +48,24 @@ nav {
 }
 
 .nav-links {
-    list-style-type: none;
-    display: flex;
+  list-style-type: none;
+  display: flex;
 }
 .nav-links li {
   margin-right: 50px;
   font-size: 1.2rem;
-  transition: transform .5s ease ;
-
+  transition: transform 0.5s ease;
 }
 .nav-links li:hover {
-
-    transform: translate3d(0ch, 0.2rem, 0em);
-}  
+  transform: translate3d(0ch, 0.2rem, 0em);
+}
 .nav-links li a {
-
   text-decoration: none;
   border-radius: 20px;
   background-color: rgba(256, 256, 256, 0.1);
   padding: 10px 20px 10px 20px;
   color: var(--font-color-main);
-  transition: background-color 0.3s ease, ;
-  
+  transition: background-color 0.3s ease;
 }
 
 .nav-links li a:hover {
@@ -125,4 +122,23 @@ nav-links li a::after {
     margin-right: 20px;
     cursor: pointer;
   }
+}
+
+.main-1{
+    
+}
+.section-1{
+    display: grid;
+    grid-row: auto;
+}
+
+.grid-1{
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.grid-2{
+    display: flex;
+    flex-direction: row;
 }
